@@ -1,4 +1,6 @@
 <html>
+  <title>Passcodes for app testing</title>
+
 <head>
 
 
@@ -6,46 +8,77 @@
             
 
 <style>
-    body {font-family: Calibri, Helvetica, Verdana, Geneva, Tahoma, sans-serif; font-size: 70%}
-    div {
-  display: block;
-  
+    body {font-family: Calibri, Helvetica, Verdana, Geneva, Tahoma, sans-serif; }
+    div {  display: block;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+    }
+    div div {
+      display: flex;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    div div div {
+      display: block;
+      align-self: auto;
+      width: 33%;
+          border-bottom: none;
+    }
+    p {padding: 0; margin: 0;}
 
-}
-section {
-  max-width: 800px;
-  margin: 50px auto;
-}
-div div {
-  display: flex;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-}
-div div div {
-  display: block;
-  align-self: auto;
-  width: 33%;
-      border-bottom: none;
-}
-p {padding: 0; margin: 0;}
+    h1 {border-bottom: 1px solid #999; padding-bottom: 10px;}
+    h2 {font-size: 14px;  margin: 10px 0 10px 0;}
+    h3 {font-size: 16px;  margin: 10px 0 10px 0;}
+    iframe {border: none; height: 28px; width: 33%; margin-top: 35px;}
+    ul {margin: 0; padding: 0 0 0 15px;}
+    li {font-size: 12px;}
 
-h2 {font-size: 16px; width: 100%}
-iframe {border: none; height: 28px; width: 33%; margin-top: 35px;}
+    button { width: 33%; height: 50px; margin-top: 20px; background: teal; color: white; border-radius: 10px; border: 1px solid green; font-size: 14px; text-transform: uppercase; margin-left: auto;}
 
-button { width: 33%; height: 60px; margin-top: 20px; background: teal; color: white; border-radius: 10px; border: 1px solid green; font-size: 20px; text-transform: uppercase; margin-left: auto;}
-button:hover {cursor: pointer; background: maroon;}
+    button:hover {cursor: pointer; background: maroon;}
+
+    @media only screen and (max-width: 850px) {
+      
+      div div {
+        min-height: 130px;  
+        position: relative;
+      }
+
+      iframe {width: 45%; margin-top: 0; position: absolute; top: 20px; right: 0;}
+      button {width: 45%; min-width: 300px; position: absolute; right: 0; top: 40px;}
+      div div div {width: 45%;}
+      
+    }
+
+    @media only screen and (max-width: 550px) {
+      
+      div div {
+        display: block;
+        min-height: auto;
+      }
+
+      iframe {width: 100%; margin-top: 0; position: relative; top: 0;}
+      button {width: 50%; min-width: 300px; float: none; margin-top: 15px; position: relative; top: 0;}
+      div div div {width: 100%;}
+    }
+    
+
 </style>
 </head>
 <body>
   <section>
     <h1>Family  Contacts</h1>
-
 <div>
   
   <div>
     <div>
-      <h2>Development ContactOne <br>(201) 489-4899</h2>
-      <p>Family > Son (primary) : Jay A<br>NOTE: Can be buggy...</p>
+      <h2>Development ContactOne</h2> <h3>(201) 489-4899</h3>
+      <ul>
+        <li>Family > Son (primary) : Jay A</li>
+        <li>NOTE: Can be buggy...</li>
+      </ul>
     </div>
     <!--<iframe id="son" src="https://us-central1-caregiver-development.cloudfunctions.net/qa-login?phone=2014894899"></iframe>-->
     <iframe id="son" src="https://api.thekey.com/auth/twilio/otp/2014894899"></iframe>
@@ -56,8 +89,10 @@ button:hover {cursor: pointer; background: maroon;}
   <div>
     <div>
       <h2>TheKey Demo <br>(201) 489-4994</h2>
+      <ul>
           <li>Family > Sister (payer): Josephine B</li>
           <li>Family > Daughter (payer): Lily S </li>
+        </ul>
     </div>
     <iframe id="daughter" src="https://api.thekey.com/auth/twilio/otp/2014894994"></iframe>
     <button id="reload-daughter" class="reload" tel="2014894994" iframe="#daughter">Reload</button>
@@ -66,9 +101,11 @@ button:hover {cursor: pointer; background: maroon;}
     <div>
       <div>
         <h2>Development ProfessionalOne <br> (201) 489-4922</h2>
-        <li>Family > Spouce (payer): Jay A</li>
+        
+        <ul><li>Family > Spouce (payer): Jay A</li>
           <li>Family > Spouce (primary): Josephine B</li>
           <li>Family > Spouce (primary): Lily S </li>
+        </ul>
       </div>
       <iframe id="doctor" src="https://api.thekey.com/auth/twilio/otp/2014894922"></iframe>
       <button id="reload-doctor" class="reload" tel="2014894922" iframe="#doctor">Reload</button>
@@ -78,7 +115,9 @@ button:hover {cursor: pointer; background: maroon;}
     <div>
       <div>
         <h2>Einar Gustafsson (Canada) <br> (438) 230-1842</h2>
-        <li>Family > Spouce (payer): Canada Aaron A</li>
+        <ul>
+          <li>Family > Spouce (payer): Canada Aaron A</li>
+        </ul>
       </div>
       <iframe id="doctor" src="https://api.thekey.com/auth/twilio/otp/4382301842"></iframe>
       <button id="reload-canada" class="reload" tel="4382301842" iframe="#canada">Reload</button>
@@ -88,9 +127,11 @@ button:hover {cursor: pointer; background: maroon;}
   <div>
       <div>
         <h2>Guillaume Meunier <br> (984) 240-2364</h2>
+        <ul>
         <li>Family > Brothery (payer, primary): Secilia Cruz</li>
         <li>Frind (primary, payer): Doo Daphne
         <li>Neighbour (primary, payer): De Fontaine Valarie</li>
+      </ul>
       </div>
       <iframe id="cg6" src="https://api.thekey.com/auth/twilio/otp/9842402363"></iframe>
       <button id="reload-cg6" class="reload" tel="9842402364" iframe="#cg6">Reload</button>
