@@ -18,6 +18,7 @@
             .on("focus", function() { document.execCommand('selectAll',false,null); })
             .focus();
         document.execCommand("copy");
+        navigator.clipboard.writeText($temp.html());
         $temp.remove();
       }
     </script>
