@@ -86,8 +86,8 @@
 </style>
 
 <script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="x2vwWvArAKZgFL4fy4tr3suERPPcvtw9";;analytics.SNIPPET_VERSION="4.15.3";
-  analytics.load("x2vwWvArAKZgFL4fy4tr3suERPPcvtw9");
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="JvFboGKqJHuCBKLSaaAE5D5AyJqsutgk";;analytics.SNIPPET_VERSION="4.15.3";
+  analytics.load("JvFboGKqJHuCBKLSaaAE5D5AyJqsutgk");
   analytics.page();
   }}();
 </script>
@@ -120,13 +120,6 @@
         document.write("<iframe id='" + i +"' src='https://api.thekey.com/auth/twilio/otp/" + TestUsers[i][1].replace(/\D/g,'') + "'></iframe>");
         document.write("<button id='reload-" + i + "' class='reload'  name='" + TestUsers[i][0] +"' tel='" + TestUsers[i][1].replace(/\D/g,'') +"' iframe='#" + i + "'>Reload</button>");
         document.write("</div></div>");
-      }
-//'" + TestUsers[i][0] + "','" + TestUsers[i][1].replace(/\D/g,'') + "'
-//onclick=\'TrackReload(\'"+ TestUsers[i][0] + "\',\'" + TestUsers[i][1] +"\')\'>Reload</button>");
-//onclick='analytics.track('Passcode reloaded', {  contact: '"+ TestUsers[i][1] +"', phone: '"+ TestUsers[i][1].replace(/\D/g,'') +"'});
-      function TrackReload(){
-        var tel = $(this).attr('tel');
-       
       }
     </script>
 
